@@ -1,6 +1,6 @@
 package com.sd.tests;
 
-import com.sd.config.ConfigFactory;
+import com.sd.config.Factory.ConfigFactory;
 import org.testng.annotations.Test;
 public class DemoTest {
     @Test

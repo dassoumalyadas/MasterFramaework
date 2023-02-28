@@ -1,5 +1,6 @@
-package com.sd.config;
+package com.sd.config.Factory;
 
+import com.sd.config.FrameworkConfig;
 import org.aeonbits.owner.ConfigCache;
 
 public final class ConfigFactory {

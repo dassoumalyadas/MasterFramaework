@@ -1,10 +1,13 @@
 package com.sd.config;
 
 import com.sd.config.converters.StringToBrowserTypeConverter;
+import com.sd.config.converters.StringToURLConverter;
 import com.sd.enums.BrowserRemoteTypeMode;
 import com.sd.enums.BrowserTypes;
 import com.sd.enums.RunModeBrowserType;
 import org.aeonbits.owner.Config;
+
+import java.net.URL;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
@@ -22,4 +25,11 @@ public interface FrameworkConfig extends Config {
 
     @Key("browserRemoteMode")
     BrowserRemoteTypeMode browserRemoteMode();
+
+    @ConverterClass(StringToURLConverter.class)
+    URL seleniumGridURL();
+
+
+    @ConverterClass(StringToURLConverter.class)
+    URL selenideURL();
 }
