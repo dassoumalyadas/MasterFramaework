@@ -23,8 +23,16 @@ public interface FrameworkConfig extends Config {
     @Key("runModeBrowser")
     RunModeBrowserType browserRunMode();
 
+    @Key("runModeMobile")
+    RunModeBrowserType mobileRunMode();
+
     @Key("browserRemoteMode")
     BrowserRemoteTypeMode browserRemoteMode();
+
+
+    @Key("mobile_remote_mode")
+    BrowserRemoteTypeMode mobileRemoteMode();
+
 
     @ConverterClass(StringToURLConverter.class)
     URL seleniumGridURL();
@@ -32,4 +40,8 @@ public interface FrameworkConfig extends Config {
 
     @ConverterClass(StringToURLConverter.class)
     URL selenideURL();
+
+    @ConverterClass(StringToURLConverter.class)
+    @DefaultValue("http://127.0.0.1:4723/wd/hub")
+    URL localAppiumServerURL();
 }
