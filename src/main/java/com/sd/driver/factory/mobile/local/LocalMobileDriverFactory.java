@@ -1,9 +1,8 @@
 package com.sd.driver.factory.mobile.local;
 
-import com.sd.driver.mobile.local.AndroidManager;
-import com.sd.driver.mobile.local.IOSManager;
 import com.sd.enums.MobilePlatformType;
 import org.openqa.selenium.WebDriver;
+import com.sd.driver.manager.mobile.local.*;
 
 import java.util.EnumMap;
 import java.util.Map;

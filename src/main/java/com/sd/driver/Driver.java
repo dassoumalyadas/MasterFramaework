@@ -1,7 +1,7 @@
 package com.sd.driver;
 
 import com.sd.config.Factory.ConfigFactory;
-import com.sd.driver.web.local.LocalDriverFactory;
+import com.sd.driver.factory.web.local.LocalDriverFactory;
 import org.openqa.selenium.WebDriver;
 
 public class Driver {

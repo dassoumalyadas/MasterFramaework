@@ -1,4 +1,4 @@
-package com.sd.driver.web.local;
+package com.sd.driver.factory.web.local;
 
 import com.sd.driver.manager.web.local.ChromeManager;
 import com.sd.driver.manager.web.local.FirefoxManager;

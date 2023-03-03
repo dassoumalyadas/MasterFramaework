@@ -1,4 +1,4 @@
-package com.sd.driver.web.remote;
+package com.sd.driver.factory.web.remote;
 
 import com.sd.driver.manager.web.remote.selenium.SeleniumGridChromeManager;
 import com.sd.driver.manager.web.remote.selenium.SeleniumGridFirefoxManager;

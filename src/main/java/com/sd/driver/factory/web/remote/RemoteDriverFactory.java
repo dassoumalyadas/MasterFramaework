@@ -1,4 +1,4 @@
-package com.sd.driver.web.remote;
+package com.sd.driver.factory.web.remote;
 
 import com.sd.enums.BrowserRemoteTypeMode;
 import com.sd.enums.BrowserTypes;

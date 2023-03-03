@@ -1,10 +1,5 @@
 package com.sd.driver.factory.mobile.remote;
 
-import com.sd.driver.web.remote.BrowserStackFactory;
-import com.sd.driver.web.remote.SelenideFactory;
-import com.sd.driver.web.remote.SeleniumGridFactory;
-import com.sd.enums.BrowserRemoteTypeMode;
-import com.sd.enums.BrowserTypes;
 import com.sd.enums.MobilePlatformType;
 import com.sd.enums.MobilerRemoteTypeMode;
 import org.openqa.selenium.WebDriver;
@@ -21,11 +16,11 @@ public final class RemoteMobileDriverFactory {
     private static final Map<MobilerRemoteTypeMode, Function<MobilePlatformType, WebDriver>> MAP = new EnumMap<>(MobilerRemoteTypeMode.class);
 
     static {
-        MAP.put(MobilerRemoteTypeMode.SAUCE_LABS, SeleniumGridFactory::getDriver);
-        MAP.put(MobilerRemoteTypeMode.BROWSER_STACK, SelenideFactory::getDriver);
+       // MAP.put(MobilerRemoteTypeMode.SAUCE_LABS, SeleniumGridFactory::getDriver);
+        MAP.put(MobilerRemoteTypeMode.BROWSER_STACK, BrowserStackMobileFactory::getDriver);
     }
 
-    public static WebDriver getDriver(MobilerRemoteTypeMode mobilerRemoteTypeMode,MobilePlatformType mobilePlatformType) {
+    public static WebDriver getDriver(MobilerRemoteTypeMode mobilerRemoteTypeMode, MobilePlatformType mobilePlatformType) {
         return MAP.get(mobilerRemoteTypeMode).apply(mobilePlatformType);
     }
 }
