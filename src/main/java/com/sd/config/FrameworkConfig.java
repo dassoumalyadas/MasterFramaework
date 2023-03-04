@@ -4,6 +4,7 @@ import com.sd.config.converters.StringToBrowserTypeConverter;
 import com.sd.config.converters.StringToURLConverter;
 import com.sd.enums.BrowserRemoteTypeMode;
 import com.sd.enums.BrowserTypes;
+import com.sd.enums.MobilerRemoteTypeMode;
 import com.sd.enums.RunModeBrowserType;
 import org.aeonbits.owner.Config;
 
@@ -31,7 +32,7 @@ public interface FrameworkConfig extends Config {
 
 
     @Key("mobile_remote_mode")
-    BrowserRemoteTypeMode mobileRemoteMode();
+    MobilerRemoteTypeMode mobileRemoteMode();
 
 
     @ConverterClass(StringToURLConverter.class)
