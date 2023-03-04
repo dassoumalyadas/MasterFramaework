@@ -13,7 +13,7 @@ public class Driver {
         DriverData driverData = DriverData.builder().browserTypes(ConfigFactory.getConfig().browser())
                                                     .browserRemoteTypeMode(ConfigFactory.getConfig().browserRemoteMode())
                                                     .runModeBrowserType(ConfigFactory.getConfig().browserRunMode()).build();
-        WebDriver driver = DriverFactory.getDriver(driverData);
+        WebDriver driver = DriverFactory.getDriverForWeb(driverData);
         driver.quit();
     }
 
@@ -21,7 +21,7 @@ public class Driver {
         DriverData driverData = DriverData.builder().mobilePlatformType(MobilePlatformType.ANDROID)
                                                     .mobilerRemoteTypeMode(ConfigFactory.getConfig().mobileRemoteMode())
                                                     .runModeBrowserType(ConfigFactory.getConfig().mobileRunMode()).build();
-        WebDriver driver = DriverFactory.getDriver(driverData);
+        WebDriver driver = DriverFactory.getDriverForMobile(driverData);
     }
 
     public static void quitDriver() {
