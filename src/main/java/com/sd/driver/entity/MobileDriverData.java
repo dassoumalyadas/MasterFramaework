@@ -2,10 +2,10 @@ package com.sd.driver.entity;
 
 import com.sd.enums.MobilePlatformType;
 import com.sd.enums.MobilerRemoteTypeMode;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@Builder
+@AllArgsConstructor
 @Getter
 public class MobileDriverData {
 

@@ -2,10 +2,7 @@ package com.sd.config;
 
 import com.sd.config.converters.StringToBrowserTypeConverter;
 import com.sd.config.converters.StringToURLConverter;
-import com.sd.enums.BrowserRemoteTypeMode;
-import com.sd.enums.BrowserTypes;
-import com.sd.enums.MobilerRemoteTypeMode;
-import com.sd.enums.RunModeBrowserType;
+import com.sd.enums.*;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
