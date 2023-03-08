@@ -22,7 +22,12 @@ public final class Driver {
             WebDriverData driverData = new WebDriverData(getConfig().browser(), getConfig().browserRemoteMode());
             WebDriver driver = DriverFactory.getDriverForWeb(getConfig().browserRunMode()).getDriver(driverData);
             DriverThreadManager.setDriver(driver);
+
         }
+    }
+
+    public static void loadURL(){
+        DriverThreadManager.getDriver().get(getConfig().webUrl());
     }
 
     public static void initDriverMobile() {
@@ -34,8 +39,8 @@ public final class Driver {
     }
 
     public static void quitDriver() {
-        if (Objects.isNull(DriverThreadManager.getDriver())) {
-            DriverThreadManager.getDriver().quit();
+        if (!Objects.isNull(DriverThreadManager.getDriver())) {
+            DriverThreadManager.getDriver().close();
             DriverThreadManager.unload();
         }
     }
